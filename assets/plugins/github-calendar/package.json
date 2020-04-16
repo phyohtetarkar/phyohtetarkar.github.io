@@ -1,41 +1,32 @@
 {
-  "name": "github-calendar",
-  "version": "1.3.1",
-  "description": "Embed your GitHub contributions calendar anywhere.",
-  "main": "lib/index.js",
-  "directories": {
-    "example": "example"
+  "_from": "github-calendar",
+  "_id": "github-calendar@2.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-8etOmeBPx2aVSox1xfaVv3RS4zDgSDX0UxjEzGkPT3jF1yS9NLR6Hod3WO+SW/VxEwKmZAmZTe0zrwaqij5Bng==",
+  "_location": "/github-calendar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "github-calendar",
+    "name": "github-calendar",
+    "escapedName": "github-calendar",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "dist-it lib/index.js github-calendar.min.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/IonicaBizau/github-calendar.git"
-  },
-  "keywords": [
-    "github",
-    "calendar",
-    "embed"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
-  "contributors": [
-    "Evan Palmer <evjpalmer@gmail.com> (http://evanpalmer.net)",
-    "Francesco Tonini <francescoantoniotonini@gmail.com> (https://francescotonini.it)",
-    "Miroslav Vidovic <miroslav-vidovic@hotmail.com>",
-    "Mike Roibu <mike@codingden.net>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IonicaBizau/github-calendar/issues"
-  },
-  "homepage": "https://github.com/IonicaBizau/github-calendar#readme",
-  "dependencies": {
-    "add-subtract-date": "^1.0.5",
-    "elly": "^1.0.0",
-    "formatoid": "^1.0.3",
-    "github-calendar-parser": "^1.1.3"
+  "_resolved": "https://registry.npmjs.org/github-calendar/-/github-calendar-2.1.1.tgz",
+  "_shasum": "bf8f0fc98717997f81bc275042f053a3361cfa45",
+  "_spec": "github-calendar",
+  "_where": "/Users/phyohtetarkar/Data/node",
+  "author": {
+    "name": "Bloggify",
+    "email": "support@bloggify.org",
+    "url": "https://bloggify.org"
   },
   "blah": {
     "example": [
@@ -62,8 +53,12 @@
             "",
             "<script>",
             "    GitHubCalendar(\".calendar\", \"your-username\");",
+            "",
             "    // or enable responsive functionality:",
             "    GitHubCalendar(\".calendar\", \"your-username\", { responsive: true });",
+            "",
+            "    // Use a proxy",
+            "    GitHubCalendar(\".calendar\", \"your-username\", { proxy (username) { return fetch(`https://your-proxy.com/github?user=${username}`).then(r => r.text()) });",
             "</script>"
           ]
         }
@@ -72,18 +67,12 @@
         "p": "[Here](http://codepen.io/anon/pen/aZmjvZ?editors=1000) you can see this example in action."
       }
     ],
-    "thanks": {
-      "ul": [
-        "Big thanks to [**@izuzak**](https://github.com/izuzak) for creating the [urlreq](https://github.com/izuzak/urlreq) project–the default proxy used by this library. :cake:",
-        "Part of the CSS code was taken from the GitHub profile page to offer the same experience. :art:"
-      ]
-    },
     "description": [
       {
-        "p": "Everybody<sup><sup>well, haters gonna hate</sup></sup> loves GitHub and everybody loves stats. So, why not making the GitHub contributions calendar available for being embeded in your web pages? Now [you can](https://ionicabizau.github.io/github-calendar/example). :tada:"
+        "p": "Everybody<sup><sup>well, haters gonna hate</sup></sup> loves GitHub and everybody loves stats. So, why not making the GitHub contributions calendar available for being embeded in your web pages? Now [you can](https://bloggify.github.io/github-calendar/example). :tada:"
       },
       {
-        "p": "[![](http://i.imgur.com/S1h8XoB.jpg)](https://ionicabizau.github.io/github-calendar/example)"
+        "p": "[![](https://i.imgur.com/tJjRpuN.png)](https://bloggify.github.io/github-calendar/example)"
       }
     ],
     "title": "github-calendar.js",
@@ -120,6 +109,46 @@
       ]
     }
   },
+  "bugs": {
+    "url": "https://github.com/Bloggify/github-calendar/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Evan Palmer",
+      "email": "evjpalmer@gmail.com",
+      "url": "http://evanpalmer.net"
+    },
+    {
+      "name": "Francesco Tonini",
+      "email": "francescoantoniotonini@gmail.com",
+      "url": "https://francescotonini.it"
+    },
+    {
+      "name": "Miroslav Vidovic",
+      "email": "miroslav-vidovic@hotmail.com"
+    },
+    {
+      "name": "Mike Roibu",
+      "email": "mike@codingden.net"
+    },
+    {
+      "name": "Rohit Rathi",
+      "email": "rathirohitg1997@gmail.com",
+      "url": "https://rathirohit.github.io"
+    }
+  ],
+  "dependencies": {
+    "add-subtract-date": "^1.0.5",
+    "elly": "^1.0.0",
+    "formatoid": "^1.0.3",
+    "github-calendar-parser": "^1.1.3"
+  },
+  "deprecated": false,
+  "description": "Embed your GitHub contributions calendar anywhere.",
+  "directories": {
+    "example": "example"
+  },
   "files": [
     "bin/",
     "app/",
@@ -134,5 +163,24 @@
     "bloggify.js",
     "bloggify.json",
     "bloggify/"
-  ]
+  ],
+  "homepage": "https://github.com/Bloggify/github-calendar#readme",
+  "keywords": [
+    "github",
+    "calendar",
+    "embed"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "github-calendar",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Bloggify/github-calendar.git"
+  },
+  "scripts": {
+    "build": "dist-it lib/index.js github-calendar.min.js --no-uglify --no-commit",
+    "release": "dist-it lib/index.js github-calendar.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.1.1"
 }
