@@ -148,7 +148,7 @@ a.dotted-link:hover {
 }
 
 .header .profile-content .social a {
-  background: #b0b7bf;
+  background: #222;
   width: 36px;
   height: 36px;
   display: inline-block;
@@ -165,7 +165,8 @@ a.dotted-link:hover {
 }
 
 .header .profile-content .social a:hover {
-  background: #778492;
+  background: #fff;
+  color: #111;
 }
 
 .header .profile-content .social a .svg-inline--fa {
@@ -184,14 +185,14 @@ a.dotted-link:hover {
 }
 
 .section .section-inner {
-  background: #fff;
+  background: var(--dark);
   padding: 30px;
 }
 
 .section .heading {
   margin-top: 0;
   margin-bottom: 30px;
-  color: #545e69;
+  color: var(--white);
   font-size: 24px;
 }
 
@@ -352,7 +353,7 @@ a.dotted-link:hover {
 }
 
 .experience .item .title .place a {
-  color: #999;
+  color: #a1aab4;
 }
 
 .experience .item .title .place a:hover {
@@ -360,7 +361,7 @@ a.dotted-link:hover {
 }
 
 .experience .item .title .year {
-  color: #999;
+  color: #a1aab4;
   font-weight: normal;
 }
 
@@ -532,7 +533,7 @@ a.dotted-link:hover {
 }
 
 .languages .item .level {
-  color: #999;
+  color: #a1aab4;
 }
 
 .languages .item:last-child {
