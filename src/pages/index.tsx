@@ -379,9 +379,9 @@ const Home: NextPage = () => {
                     <div className="vstack gap-3">
                       {certificates.map((e, i) => {
                         return (
-                          <div key={i} className="row align-items-center">
+                          <div key={i} className="hstack gap-3">
                             <div
-                              className="ratio ratio-1x1 col-auto me-1"
+                              className="ratio ratio-1x1 flex-shrink-0"
                               style={{ width: 60, height: 60 }}
                             >
                               <Image
@@ -396,7 +396,7 @@ const Home: NextPage = () => {
                               href={e.url}
                               rel="noreferrer"
                               target="_blank"
-                              className="link-light opacity-75 col"
+                              className="link-light opacity-75"
                             >
                               {e.title}
                             </a>
