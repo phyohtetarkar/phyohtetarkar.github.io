@@ -39,15 +39,16 @@ const Home: NextPage = () => {
                   width={180}
                   height={180}
                   objectFit="cover"
+                  priority
                 />
               </div>
               <div className="vstack justify-content-center">
                 <h2 className="fw-bold text-light">
                   {process.env.NEXT_PUBLIC_USER_NAME}
                 </h2>
-                <h5 className="mb-3 fw-normal text-light">
+                <div className="mb-3 text-light" style={{ fontSize: 18 }}>
                   {process.env.NEXT_PUBLIC_HEADLINE}
-                </h5>
+                </div>
                 <div className="hstack gap-2">
                   <a
                     href={process.env.NEXT_PUBLIC_TWITTER_URL}
@@ -105,9 +106,41 @@ const Home: NextPage = () => {
         <hr className="my-0 border-secondary" />
         <div className="">
           <div className="container py-4">
+            <div className="row g-4 mb-4 d-block d-lg-none">
+              <div className="col-lg-8">
+                <div className="card text-bg-dark border-secondary">
+                  <div className="card-body p-md-4">
+                    <h5 className="fw-bold mb-3">About Me</h5>
+                    <p className="mb-0 opacity-75 fw-light">{_about_me}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="card text-bg-dark border-secondary">
+                  <div className="card-body p-md-4">
+                    <h5 className="fw-bold mb-3">Contact</h5>
+                    <div className="vstack gap-2">
+                      <div className="hstack gap-3">
+                        <MapPin size={18} />
+                        <span>{process.env.NEXT_PUBLIC_LOCATION}</span>
+                      </div>
+                      <div className="hstack gap-3">
+                        <Mail size={18} />
+                        <a
+                          className="link-success"
+                          href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                        >
+                          {process.env.NEXT_PUBLIC_EMAIL}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="row">
               <div className="col-lg-8">
-                <div className="card text-bg-dark border-secondary mb-4">
+                <div className="card text-bg-dark border-secondary mb-4 d-none d-lg-block">
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">About Me</h5>
                     <p className="mb-0 opacity-75 fw-light">{_about_me}</p>
@@ -151,7 +184,7 @@ const Home: NextPage = () => {
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">Work Experiences</h5>
                     <div className="mb-4">
-                      <div className="hstack mb-2">
+                      <div className="hstack mb-2 d-none d-lg-flex">
                         <span className="fw-semibold">
                           Senior iOS Developer -
                         </span>
@@ -159,12 +192,20 @@ const Home: NextPage = () => {
                           Advent Soft (2020)
                         </span>
                       </div>
-                      <ul className="text-muted">
+                      <div className="vstack mb-2 d-flex d-lg-none">
+                        <span className="fw-semibold">
+                          Senior iOS Developer
+                        </span>
+                        <span className="text-muted text-light small">
+                          Advent Soft (2020)
+                        </span>
+                      </div>
+                      <ul className="text-light opacity-50">
                         <li>Build, design and develop iOS applications</li>
                       </ul>
                     </div>
                     <div className="">
-                      <div className="hstack mb-2">
+                      <div className="hstack mb-2 d-none d-lg-flex">
                         <span className="fw-semibold">
                           Senior Software Engineer -
                         </span>
@@ -172,7 +213,15 @@ const Home: NextPage = () => {
                           Operating Partners Myanmar (2016 - 2020)
                         </span>
                       </div>
-                      <ul className="text-muted mb-0">
+                      <div className="vstack mb-2 d-flex d-lg-none">
+                        <span className="fw-semibold">
+                          Senior Software Engineer
+                        </span>
+                        <span className="text-muted text-light small">
+                          Operating Partners Myanmar (2016 - 2020)
+                        </span>
+                      </div>
+                      <ul className="text-light opacity-50 mb-0">
                         <li>Lead and train mobile development</li>
                         <li>Build, design and develop Java EE application</li>
                         <li>
@@ -199,7 +248,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="card text-bg-dark border-secondary mb-4">
+                <div className="card text-bg-dark border-secondary mb-4 d-none d-lg-block">
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">Contact</h5>
                     <div className="vstack gap-2">
@@ -219,7 +268,6 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="card text-bg-dark border-secondary mb-4">
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">Skills</h5>
