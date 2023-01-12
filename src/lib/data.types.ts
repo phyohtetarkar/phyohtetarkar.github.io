@@ -14,3 +14,14 @@ export interface Certificate {
   title: string;
   url: string;
 }
+
+export interface Skill {
+  title: string;
+  percentage: number;
+}
+
+export interface Experience {
+  title: string;
+  company: string;
+  responsibilities: [string];
+}

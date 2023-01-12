@@ -10,7 +10,7 @@ import {
   Twitter
 } from "react-feather";
 import GitHubCalendar from "react-github-calendar";
-import { certificates, projects } from "../lib/data";
+import { certificates, experiences, projects, skills } from "../lib/data";
 
 const _about_me = `
 I'm a full-stack developer. 
@@ -146,6 +146,7 @@ const Home: NextPage = () => {
                     <p className="mb-0 opacity-75 fw-light">{_about_me}</p>
                   </div>
                 </div>
+
                 <div className="card text-bg-dark border-secondary mb-4">
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">Projects</h5>
@@ -157,7 +158,7 @@ const Home: NextPage = () => {
                             <p className="opacity-75 fw-light mb-2">
                               {e.about}
                             </p>
-                            <div className="hstack gap-1">
+                            <div className="hstack">
                               {e.links.map((l, i) => {
                                 return (
                                   <div key={i}>
@@ -169,7 +170,11 @@ const Home: NextPage = () => {
                                     >
                                       {l.type}
                                     </a>
-                                    {i < e.links.length - 1 && ` &`}
+                                    {i < e.links.length - 1 && (
+                                      <span className="mx-1 text-light opacity-75">
+                                        &amp;
+                                      </span>
+                                    )}
                                   </div>
                                 );
                               })}
@@ -180,57 +185,38 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="card text-bg-dark border-secondary mb-4">
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">Work Experiences</h5>
-                    <div className="mb-4">
-                      <div className="hstack mb-2 d-none d-lg-flex">
-                        <span className="fw-semibold">
-                          Senior iOS Developer -
-                        </span>
-                        <span className="text-muted ms-1">
-                          Advent Soft (2020)
-                        </span>
-                      </div>
-                      <div className="vstack mb-2 d-flex d-lg-none">
-                        <span className="fw-semibold">
-                          Senior iOS Developer
-                        </span>
-                        <span className="text-muted text-light small">
-                          Advent Soft (2020)
-                        </span>
-                      </div>
-                      <ul className="text-light opacity-50">
-                        <li>Build, design and develop iOS applications</li>
-                      </ul>
-                    </div>
-                    <div className="">
-                      <div className="hstack mb-2 d-none d-lg-flex">
-                        <span className="fw-semibold">
-                          Senior Software Engineer -
-                        </span>
-                        <span className="text-muted ms-1">
-                          Operating Partners Myanmar (2016 - 2020)
-                        </span>
-                      </div>
-                      <div className="vstack mb-2 d-flex d-lg-none">
-                        <span className="fw-semibold">
-                          Senior Software Engineer
-                        </span>
-                        <span className="text-muted text-light small">
-                          Operating Partners Myanmar (2016 - 2020)
-                        </span>
-                      </div>
-                      <ul className="text-light opacity-50 mb-0">
-                        <li>Lead and train mobile development</li>
-                        <li>Build, design and develop Java EE application</li>
-                        <li>
-                          Solving and guide to fix complex technical problems
-                        </li>
-                      </ul>
+                    <div className="vstack gap-4">
+                      {experiences.map((e, i) => {
+                        return (
+                          <div key={i}>
+                            <div className="hstack mb-2 d-none d-lg-flex">
+                              <span className="fw-semibold">{e.title} -</span>
+                              <span className="text-muted ms-1">
+                                {e.company}
+                              </span>
+                            </div>
+                            <div className="vstack mb-2 d-flex d-lg-none">
+                              <span className="fw-semibold">{e.title}</span>
+                              <span className="text-muted text-light small">
+                                {e.company}
+                              </span>
+                            </div>
+                            <ul className="text-light opacity-50 mb-0">
+                              {e.responsibilities.map((r, i) => {
+                                return <li key={i}>{r}</li>;
+                              })}
+                            </ul>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
+
                 <div className="card text-bg-dark border-secondary mb-4">
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">My Github</h5>
@@ -272,151 +258,25 @@ const Home: NextPage = () => {
                   <div className="card-body p-md-4">
                     <h5 className="fw-bold mb-3">Skills</h5>
                     <div className="vstack gap-3">
-                      <div>
-                        <h6 className="opacity-50">Java EE / Spring</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">
-                          Native Android &amp; iOS Development
-                        </h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">ReactJS Development</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">React Native Development</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">Flutter Development</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">Java</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">Kotlin</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">Javascript / Typescript</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={90}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "90%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h6 className="opacity-50">Swift</h6>
-                        <div className="progress">
-                          <div
-                            className="progress-bar bg-success"
-                            role="progressbar"
-                            aria-valuenow={80}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "80%"
-                            }}
-                          ></div>
-                        </div>
-                      </div>
+                      {skills.map((e, i) => {
+                        return (
+                          <div key={i}>
+                            <h6 className="opacity-50">{e.title}</h6>
+                            <div className="progress">
+                              <div
+                                className="progress-bar bg-success"
+                                role="progressbar"
+                                aria-valuenow={e.percentage}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{
+                                  width: `${e.percentage}%`
+                                }}
+                              ></div>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

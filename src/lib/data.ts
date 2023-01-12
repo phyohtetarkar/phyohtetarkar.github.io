@@ -1,4 +1,4 @@
-import { Certificate, Project } from "./data.types";
+import { Certificate, Experience, Project, Skill } from "./data.types";
 
 export const projects = [
   {
@@ -93,3 +93,59 @@ export const certificates = [
     image: "/images/coursera.png"
   }
 ] as Certificate[];
+
+export const skills = [
+  {
+    title: "Java EE / Spring",
+    percentage: 90
+  },
+  {
+    title: "Native Android & iOS Development",
+    percentage: 90
+  },
+  {
+    title: "ReactJS Development",
+    percentage: 90
+  },
+  {
+    title: "React Native Development",
+    percentage: 90
+  },
+  {
+    title: "Flutter Development",
+    percentage: 90
+  },
+  {
+    title: "Java",
+    percentage: 90
+  },
+  {
+    title: "Kotlin",
+    percentage: 90
+  },
+  {
+    title: "Swift",
+    percentage: 85
+  },
+  {
+    title: "Javascript / Typescript",
+    percentage: 90
+  }
+] as Skill[];
+
+export const experiences = [
+  {
+    title: "Senior iOS Developer",
+    company: "Advent Soft (2020)",
+    responsibilities: ["Build, design and develop iOS applications"]
+  },
+  {
+    title: "Senior Software Developer",
+    company: "Operating Partners Myanmar (2016 - 2020)",
+    responsibilities: [
+      "Lead and train mobile development",
+      "Build, design and develop Java EE application",
+      "Solving and guide to fix complex technical problems"
+    ]
+  }
+] as Experience[];
