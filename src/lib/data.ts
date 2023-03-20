@@ -31,6 +31,20 @@ export const projects = [
     ]
   },
   {
+    title: "Myanmar Labour News",
+    about: "News media web and mobile application.",
+    links: [
+      {
+        type: "Website",
+        url: "https://www.myanmarlabournews.com"
+      },
+      {
+        type: "Android",
+        url: "https://play.google.com/store/apps/details?id=com.mmlabour.news"
+      }
+    ]
+  },
+  {
     title: "Wallet Ledger",
     about: "Wallet Ledger is a free income expense managing mobile app.",
     links: [

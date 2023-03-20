@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import {
@@ -24,6 +24,15 @@ const Home: NextPage = () => {
       <Head>
         <title>{process.env.NEXT_PUBLIC_USER_NAME}</title>
         <meta name="description" content="Hi, I'm Phyo Htet Arkar." />
+        <meta
+          property="og:image"
+          content="https://phyohtetarkar.github.io/images/cover.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://phyohtetarkar.github.io/images/cover.png"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -357,6 +366,12 @@ const Home: NextPage = () => {
       </footer>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {} // will be passed to the page component as props
+  };
 };
 
 export default Home;
