@@ -1,6 +1,7 @@
 export interface Project {
   title: string;
   about: string;
+  image: string;
   links: ProjectLink[];
 }
 
@@ -23,5 +24,6 @@ export interface Skill {
 export interface Experience {
   title: string;
   company: string;
-  responsibilities: [string];
+  url: string;
+  responsibilities: string[];
 }
