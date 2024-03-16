@@ -24,15 +24,18 @@ Also, I'm able to catch up the fast pace changes in technologies and enjoy on re
     <>
       <div className="">
         <div className="container py-4">
-          <div className="hstack gap-4">
-            <div>
+          <div className="hstack align-items-start gap-4">
+            <div className="ratio ratio-1x1" style={{
+              width: "12rem",
+              minWidth: "6rem",
+            }}>
               <Image
                 src="/images/profile.jpg"
                 alt="profile"
                 className="rounded-circle"
-                width={180}
-                height={180}
+                fill
                 priority
+                sizes="50vh"
                 style={{
                   objectFit: "cover",
                 }}
@@ -43,9 +46,9 @@ Also, I'm able to catch up the fast pace changes in technologies and enjoy on re
                 {process.env.NEXT_PUBLIC_TITLE}
               </h2>
               <div className="mb-3 text-light" style={{ fontSize: 18 }}>
-                Java EE Developer | Android Developer | iOS Developer
+                Senior Software Engineer
               </div>
-              <div className="hstack gap-2">
+              <div className="hstack flex-wrap gap-2">
                 <a
                   href={process.env.NEXT_PUBLIC_TWITTER_URL}
                   target="_blank"

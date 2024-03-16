@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL ?? ""),
   title: process.env.NEXT_PUBLIC_TITLE,
   description: process.env.NEXT_PUBLIC_DESCRIPTION,
+
   openGraph: {
     url: process.env.NEXT_PUBLIC_BASE_URL,
     title: process.env.NEXT_PUBLIC_TITLE,
@@ -31,6 +32,22 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          `,
+          }}
+        />
+      </head>
       <body className="bg-dark">
         <main>{children}</main>
         <footer className="container">
