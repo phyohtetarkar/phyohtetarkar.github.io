@@ -2,6 +2,17 @@ import { Certificate, Experience, Project, Skill } from "./data.types";
 
 export const projects: Project[] = [
   {
+    title: "E-learning project (Open-sourced)",
+    image: "/images/projects/hope-logo.svg",
+    about: "An open-sourced e-learning project build with NestJS backend and Next.js frontend.",
+    links: [
+      {
+        type: "Github",
+        url: "https://github.com/phyohtetarkar/hope-elearning-backend"
+      }
+    ]
+  },
+  {
     title: "Multi-vendor Marketplace E-commerce (Open-sourced)",
     image: "/images/projects/marketplace.png",
     about: "An open-sourced multi-vendor marketplace project build with Spring boot backend and Next.js frontend.",
@@ -153,6 +164,10 @@ export const skills: Skill[] = [
     percentage: 90
   },
   {
+    title: "NestJS",
+    percentage: 80
+  },
+  {
     title: "Native Android & iOS Development",
     percentage: 90
   },
@@ -188,7 +203,13 @@ export const skills: Skill[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Senior Software Engineer (Full-stack)",
+    title: "Senior Software Engineer (Freelance)",
+    company: "Teromac technologies (2024 - present)",
+    url: "https://teromac.com/",
+    responsibilities: ["Take all responsibilities for full SDLC"]
+  },
+  {
+    title: "Senior Software Engineer",
     company: "Freelance (2020 - present)",
     url: "#",
     responsibilities: ["Take all responsibilities for full SDLC"]

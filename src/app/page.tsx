@@ -13,7 +13,7 @@ import React from "react";
 
 export default function Home() {
   const _about_me = `
-I'm a full-stack developer. 
+Hi, I'm a full-stack developer. 
 I'm specializing in developing high quality Back-end services and Native/Hybrid Mobile applications. 
 Also, I'm able to catch up the fast pace changes in technologies and enjoy on researching new technologies.
 `;
