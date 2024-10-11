@@ -76,21 +76,21 @@ export const projects: Project[] = [
       }
     ]
   },
-  // {
-  //   title: "Myanmar Labour News",
-  //   image: "",
-  //   about: "News media web and mobile application.",
-  //   links: [
-  //     {
-  //       type: "Website",
-  //       url: "https://www.myanmarlabournews.com"
-  //     },
-  //     {
-  //       type: "Android",
-  //       url: "https://play.google.com/store/apps/details?id=com.mmlabour.news"
-  //     }
-  //   ]
-  // },
+  {
+    title: "Myanmar Labour News",
+    image: "/images/projects/myanmarlabournews.png",
+    about: "News media web and mobile application.",
+    links: [
+      {
+        type: "Website",
+        url: "https://www.myanmarlabournews.com"
+      },
+      {
+        type: "Android",
+        url: "https://play.google.com/store/apps/details?id=com.mmlabour.news"
+      }
+    ]
+  },
   {
     title: "Wallet Ledger",
     image: "/images/projects/walletledger.webp",
