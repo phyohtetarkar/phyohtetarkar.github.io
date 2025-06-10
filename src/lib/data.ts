@@ -2,6 +2,21 @@ import { Certificate, Experience, Project, Skill } from "./data.types";
 
 export const projects: Project[] = [
   {
+    title: "Tiptap block editor template (Open-sourced)",
+    image: "/images/placeholder.jpg",
+    about: "Notion style AI-powered block editor build with Tiptap + Vercel AI SDK + Shadcn + Tailwindcss.",
+    links: [
+      {
+        type: "Website",
+        url: "https://tiptap-block-editor.web.app/"
+      },
+      {
+        type: "Github",
+        url: "https://github.com/phyohtetarkar/tiptap-block-editor"
+      },
+    ]
+  },
+  {
     title: "E-learning project (Open-sourced)",
     image: "/images/projects/hope-logo.svg",
     about: "An open-sourced e-learning project build with NestJS backend and Next.js frontend.",
@@ -13,13 +28,13 @@ export const projects: Project[] = [
     ]
   },
   {
-    title: "Multi-vendor Marketplace E-commerce (Open-sourced)",
+    title: "Multi-vendor Marketplace E-commerce",
     image: "/images/projects/marketplace.png",
-    about: "An open-sourced multi-vendor marketplace project build with Spring boot backend and Next.js frontend.",
+    about: "Multi-vendor marketplace project build with Spring boot backend and Next.js frontend.",
     links: [
       {
-        type: "Github",
-        url: "https://github.com/phyohtetarkar/marketplace-backend"
+        type: "Website",
+        url: "https://www.shoppingmallmyanmar.com"
       }
     ]
   },
@@ -155,6 +170,11 @@ export const certificates: Certificate[] = [
     title: "Build a Modern Computer form First Principals: From Nand to Tetris",
     url: "https://www.coursera.org/account/accomplishments/verify/5PBM6CN43S8Q",
     image: "/images/coursera.png"
+  },
+  {
+    title: "Working in a Digital World: Professional Skills",
+    url: "https://www.credly.com/badges/26a2878d-030d-4bc4-aed7-4283edac3b98",
+    image: "/images/professional-skills.png"
   }
 ];
 
